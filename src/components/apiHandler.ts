@@ -10,7 +10,7 @@ export const getLocation = async () => {
 	const locationStore = useLocationStore()
 	loadingStore.setLoadingCountry(true)
 
-	const result = await axios.get('http://ip-api.com/json/').catch((err) => {
+	const result = await axios.get('https://ipapi.co/json/').catch((err) => {
 		console.warn(err)
 
 		return null
@@ -19,8 +19,8 @@ export const getLocation = async () => {
 	if (!result) {
 		return
 	}
-	const { lat, lon, city, countryCode } = result.data;
-	locationStore.setLocation({ lat, lon: lon, city, countryCode });
+	const { latitude, longitude, city, country_code } = result.data;
+	locationStore.setLocation({ lat: latitude, lon: longitude, city, countryCode: country_code });
 	loadingStore.setLoadingCountry(false);
 
 	getWeather()
