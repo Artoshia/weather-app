@@ -1,0 +1,31 @@
+{
+  "name": "weather-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "test": "cypress open --component",
+    "e2e": "start-server-and-test vite http-get://localhost:5173 'cypress open --e2e'"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "pinia": "^2.1.7",
+    "start-server-and-test": "^2.0.3",
+    "vue": "^3.4.19"
+  },
+  "devDependencies": {
+    "@cypress/vite-dev-server": "^5.0.7",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.17",
+    "cypress": "^13.6.6",
+    "cypress-vite": "^1.5.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vue-tsc": "^1.8.27"
+  }
+}
