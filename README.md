@@ -32,7 +32,7 @@ Run `npm run e2e` to execute the end-to-end tests via [Cypresss](https://github.
 ## Technologies used and why
 - Cypress for its E2E & component testing. This is because I find it to be a very powerful and commonly used tool, it is easy to use, very reliable as well as tests content within actual browsers, with the option to test across multiple browsers & devices.
 - Vite instead of webpack for its speed and its deep integration with vue.js. It allows me to build & generate vue.js applications much faster than webpack does.
-- The IP Geolocation API (non commercial version) (https://ip-api.com/) to quickly gather a rough location for use.
+- The IP Geolocation API (non commercial version) (https://ipapi.co/json/) to quickly gather a rough location for use.
 - Node.js for its simple but fast backend hosting ability.
 - Vue.js 3 for its elegant and optimized design, while also being able to be easy to maintain and upgrade even by non Vue.js users since it has similar functionality to Angular & React.
 - TailwindCSS for its fast but customisable approach to CSS framework design. Allows me to make a website quickly without having to touch any CSS, while still following good design principles. It is also highly optimized only providing css classes that I have used in the app.
