@@ -1,5 +1,5 @@
 import WeatherDashComponent from './WeatherDashComponent.vue'
-import { useWeatherStore, useLocationStore, useLoadingStore } from '../storeManager'
+import { useWeatherStore } from '../storeManager'
 import { createPinia, setActivePinia } from 'pinia'
 import { getLocation, getWeather } from '../apiHandler'
 

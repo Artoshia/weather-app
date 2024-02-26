@@ -26,7 +26,7 @@ import { defineComponent } from 'vue';
 import WeatherItemComponent from '../WeatherItemComponent/WeatherItemComponent.vue';
 
 import { useLoadingStore, useLocationStore, useWeatherStore, loadingWeatherSkeletonData } from '../storeManager';
-//import { storeToRefs } from 'pinia';
+
 
 
 export default defineComponent({

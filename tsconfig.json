@@ -23,12 +23,14 @@
     "noFallthroughCasesInSwitch": true,
     "types": [
       "cypress"
-    ]
+    ],
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "src",
+    "cypress"
   ],
   "references": [
     {

@@ -30,7 +30,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useLoadingStore, useLocationStore } from '../storeManager';
-//import { storeToRefs } from 'pinia';
+
 
 export default defineComponent({
 	name: 'LocationComponent',

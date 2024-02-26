@@ -1,6 +1,6 @@
-import { useWeatherStore, useLocationStore, useLoadingStore } from '../../src/components/storeManager'
+import { useWeatherStore, useLocationStore } from '../../src/components/storeManager'
 import { createPinia, setActivePinia } from 'pinia'
-import { getLocation, getWeather } from '../../src/components/apiHandler'
+import { getLocation } from '../../src/components/apiHandler'
 
 describe('template spec', () => {
   setActivePinia(createPinia())

@@ -8,37 +8,37 @@
                 'bg-black/20 rounded-full max-w-48': loadingStore.loadingDashboard,
             }">
                 <span class="material-symbols-outlined text-[48px]">
-                    {{ allIconTypes[weatherData.weatherIcon] }}
-                </span>
-                <h3 class="text-md font-semibold py-1">{{ weatherData.date }}</h3>
-            </div>
+                        {{ allIconTypes[weatherData.weatherIcon as keyof typeof allIconTypes] }}
+                    </span>
+                    <h3 class="text-md font-semibold py-1">{{ weatherData.date }}</h3>
+                </div>
 
-            <h2 class="text-lg font-bold my-2" :class="{
-                'bg-black/20 rounded-full max-w-56': loadingStore.loadingDashboard,
-            }">{{ weatherData.averageTemp.toFixed(1) }}°C</h2>
-            <p class="font-medium my-2" :class="{
-                'bg-black/20 rounded-full max-w-56': loadingStore.loadingDashboard,
-            }">Low {{ weatherData.lowestTemp.toFixed(1) }}°C | High {{
+                <h2 class="text-lg font-bold my-2" :class="{
+                    'bg-black/20 rounded-full max-w-56': loadingStore.loadingDashboard,
+                }">{{ weatherData.averageTemp.toFixed(1) }}°C</h2>
+                <p class="font-medium my-2" :class="{
+                    'bg-black/20 rounded-full max-w-56': loadingStore.loadingDashboard,
+                }">Low {{ weatherData.lowestTemp.toFixed(1) }}°C | High {{
     weatherData.highestTemp.toFixed(1) }}°C
-            </p>
-            <p class="font-medium my-2" :class="{
-                'bg-black/20 rounded-full max-w-96': loadingStore.loadingDashboard,
-            }">Visibility: {{ (weatherData.averageVisibility / 1000).toFixed(0) }}KM</p>
-            <p class="font-medium my-2" :class="{
-                'bg-black/20 rounded-full max-w-96': loadingStore.loadingDashboard,
-            }">{{ weatherData.weatherDescription }}</p>
-        </div>
-        <div class="md:grid lg:grid-cols-4 md:grid-cols-2 gap-2 justify-between">
-            <div v-for="weather in  weatherData.allData " :class="{
-                'bg-black/20 border-0': loadingStore.loadingDashboard,
+                </p>
+                <p class="font-medium my-2" :class="{
+                    'bg-black/20 rounded-full max-w-96': loadingStore.loadingDashboard,
+                }">Visibility: {{ (weatherData.averageVisibility / 1000).toFixed(0) }}KM</p>
+                <p class="font-medium my-2" :class="{
+                    'bg-black/20 rounded-full max-w-96': loadingStore.loadingDashboard,
+                }">{{ weatherData.weatherDescription }}</p>
+            </div>
+            <div class="md:grid lg:grid-cols-4 md:grid-cols-2 gap-2 justify-between">
+                <div v-for="weather in  weatherData.allData " :class="{
+                    'bg-black/20 border-0': loadingStore.loadingDashboard,
 
-                'border-2': !loadingStore.loadingDashboard,
-            }" class="my-1 rounded-lg p-1 shadow-xl hover:z-20 transition-all hover:shadow-2xl ">
-                <div class="p-2">
-                    <span class="material-symbols-rounded text-[36px] w-full text-center drop-shadow-2xl z-0 " :class="{
-                        'text-black/70': !loadingStore.loadingDashboard, 'text-transparent': loadingStore.loadingDashboard
-                    }">
-                        {{ allIconTypes[weather.weatherIcon] }}
+                    'border-2': !loadingStore.loadingDashboard,
+                }" class="my-1 rounded-lg p-1 shadow-xl hover:z-20 transition-all hover:shadow-2xl ">
+                    <div class="p-2">
+                        <span class="material-symbols-rounded text-[36px] w-full text-center drop-shadow-2xl z-0 " :class="{
+                            'text-black/70': !loadingStore.loadingDashboard, 'text-transparent': loadingStore.loadingDashboard
+                        }">
+                            {{ allIconTypes[weather.weatherIcon as keyof typeof allIconTypes] }}
                     </span>
                     <h4 class="font-semibold text-[20px] text-center">{{ weather.date }}</h4>
                     <h4 class="font-semibold text-[20px] text-center">{{ weather.temp.toFixed(1) }}°C</h4>
@@ -65,7 +65,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useLoadingStore } from '../storeManager';
-//import { storeToRefs } from 'pinia';
 
 export default defineComponent({
     name: 'WeatherItem',
