@@ -12,7 +12,7 @@ Run `npm run dev` for a dev server. Navigate to `http://localhost:5173/`. The ap
 
 ## Build
 
-Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build` to build the project. The build artifacts will be stored in the `Server/public` directory.
 
 ## Running unit tests
 
